@@ -5,7 +5,7 @@ public class Main {
         Hamburger hamburger=new Hamburger("garlic", "grilled chicken", "'Juicy Chicken'", 180);
         hamburger.setLettuce(true);
         hamburger.setTomato(true);
-        hamburger.finalPrice();
+        System.out.println("Total price: " + hamburger.finalPrice());
         HealthyBurger healthyBurger=new HealthyBurger("roasted chicken", 160, true);
         healthyBurger.setOats("Strawberry", 50);
         healthyBurger.finalPrice();
@@ -49,6 +49,8 @@ public class Main {
 
         public double finalPrice()
         {
+            System.out.println("A customized " + name + " burger with " + bread +" bread type and " + meat + " meat worth "+ price + " rupees added.");
+
             if(this.tomato)
             {
                 price+=0.5;
@@ -72,7 +74,6 @@ public class Main {
 
                 System.out.println("olives worth 0.5 rupees added.");
             }
-            System.out.println("A customized " + name + " burger with " + bread +" bread type and " + meat + " meat worth "+ price + " rupees added.");
             return price;
         }
     }
